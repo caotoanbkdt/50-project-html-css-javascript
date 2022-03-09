@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-position: center center;
+  background-size: cover;
+  transition: 0.3s ease;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: -1;
+}
+
+.container {
+  width: 70vw;
+  height: 70vh;
+  overflow: hidden;
+  position: relative;
+}
+
+
+.slider {
+  opacity: 0;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: -15vh;
+  left: -15vw;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.slider.active {
+  opacity: 1;
+}
+
+.btn {
+  cursor: pointer;
+  border: 2px solid orange;
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 20px;
+  color: #fff;
+  font-size: 30px;
+  background-color: transparent;
+}
+
+.btn:focus {
+  outline: 0;
+}
+
+.btn-left {
+  border-right: 0;
+  left: calc(15vw - 66px);
+}
+
+.btn-right {
+  border-left: 0;
+  right: calc(15vw - 66px);
+}

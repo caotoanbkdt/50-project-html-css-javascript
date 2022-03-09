@@ -1,0 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: linear-gradient(to right, #d6d6db 50%, #ececbf 100%);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  max-width: 100%;
+  width: 1200px;
+  margin: 10px auto;
+  padding: 30px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -8px ;
+}
+
+.col {
+  padding: 8px;
+}
+
+.card {
+ border-radius: 5px;
+ background-color: #defde0;
+ padding: 30px;
+  display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+ box-shadow: 0 2px 10px rgba(100,100,100,0.5);
+}
+
+.card .img-container {
+  background-color: rgba(255,255,255,0.6);
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  text-align: center;
+}
+
+.card .img-container img {
+  width: 90%;
+  margin-top: 20px;
+}
+
+.card .info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+@media (max-width: 739px) {
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%; 
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1023px) {
+  .col-md-4 {
+  flex: 0 0 25%;
+  max-width: 25%;
+}
+}
+
+@media (min-width: 1024px) {
+  .col-lg-2 {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+}
+
+}
+
+

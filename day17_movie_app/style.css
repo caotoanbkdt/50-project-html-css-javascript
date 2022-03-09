@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+   background-color: rgb(180, 20, 180);
+  font-family: 'Roboto', sans-serif;
+}
+
+
+header {
+   height: 80px;
+   background-color: rgb(119, 3, 119);
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+
+header input {
+  border: 1px solid #1d1d1d;
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 15px;
+  margin-right: 10px;
+  color: rgb(200, 158, 240);
+  font-size: 16px;
+}
+
+header input:focus {
+  outline: none;
+}
+
+header input::placeholder {
+  color: rgb(200, 158, 240);
+  font-weight: bold;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 10px 8px;
+}
+
+.col {
+  flex: 0 0 16.66667%;
+  max-width: 16.66667%;
+  padding: 0 8px;
+  margin: 10px 0;
+}
+
+.movie {
+  position: relative;
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+  background-color: blueviolet;
+  overflow: hidden;
+}
+
+.movie img {
+  flex: 1;
+  width: 100%;
+  object-fit: cover;
+}
+
+.movie .movie-info {
+  display: flex;
+  padding: 10px 10px 30px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.movie-info h4 {
+  color: #fff;
+}
+
+.movie-info .rating {
+  padding: 5px;
+  background-color: rgba(0,0,0, 0.3);
+}
+
+.movie-info .rating.green {
+  color: lightgreen;
+}
+
+.movie-info .rating.orange {
+  color: orange;
+}
+
+.movie-info .rating.red {
+  color: red;
+}
+
+.description {
+  background-color: #fff;
+  padding: 10px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  max-height: 100%;
+  transform-origin: bottom center;
+  transform: translateY(101%);
+  transition: transform 0.2s ease;
+}
+
+.movie:hover .description {
+  transform: translateY(0);
+}
+
+@media (max-width: 739px) {
+  .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 1239px) {
+  .col {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}

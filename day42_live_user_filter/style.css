@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #ddd;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container {
+  background-color: #fff;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+header {
+  padding: 20px;
+  color: #fff;
+  background-color: rgb(43, 43, 250);
+}
+
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+
+header span {
+  display: block;
+  font-size: 12px;
+  margin: 10px 0 20px;
+}
+
+header input  {
+  width: 100%;
+  border-radius: 20px;
+  padding: 10px;
+  border: none;
+}
+
+header input:focus {
+  outline: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.list li{
+  list-style: none;
+  padding: 20px;
+}
+
+.list li:not(:last-child) {
+  border-bottom: 1px solid #ddd;
+}
+
+.list li img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.list li a {
+  color: #000;
+  text-decoration: none;
+   display: flex;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  margin-left: 10px;
+}
+
+.info .name {
+  font-weight: bold;
+}
+
+li.hidden {
+  display: none;
+}
